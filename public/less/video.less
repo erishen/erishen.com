@@ -1,0 +1,68 @@
+.erishen-video {
+  *::-webkit-media-controls-enclosure {
+    display:none !important;
+    -webkit-appearance: none;
+  }
+  *::-webkit-media-controls-panel {
+    display: none!important;
+    -webkit-appearance: none;
+  }
+  *::-webkit-media-controls-panel-container {
+    display: none!important;
+    -webkit-appearance: none;
+  }
+  *::--webkit-media-controls-play-button {
+    display: none!important;
+    -webkit-appearance: none;
+  }
+  *::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+  }
+  *::-webkit-media-controls {
+    display: none!important;
+    -webkit-appearance: none;
+  }
+
+  .video-content {
+    .video-wrap {
+      .video-live, .video-record {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0px;
+
+        &:extend(.eri-flex);
+        &:extend(.eri-flex1);
+        &:extend(.eri-column);
+        &:extend(.eri-justify-space-between);
+      }
+
+      .player-center {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+
+        &:extend(.eri-flex);
+        &:extend(.eri-flex1);
+        &:extend(.eri-row);
+        &:extend(.eri-justify-center);
+        &:extend(.eri-align-center);
+
+        .player-button {
+          width: 90px;
+          height: 90px;
+          border: 3px solid white;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+
