@@ -5,6 +5,9 @@ const logger = require('../build/lib/logger')
 const webpackConfig = require('../build/webpack.config')
 const project = require('../project.config')
 const compress = require('compression')
+const appEjs = require('./ejs');
+const appData = require('./data');
+const appCrawler = require('./crawler');
 
 const app = express()
 app.use(compress())
@@ -28,6 +31,10 @@ if (project.env === 'development') {
   app.use(require('webpack-hot-middleware')(compiler, {
     path: '/__webpack_hmr'
   }))
+
+  appEjs.index(app);
+  appData.index(app);
+  appCrawler.index(app);
 
   // Serve static assets from ~/public since Webpack is unaware of
   // these files. This middleware doesn't need to be enabled outside
